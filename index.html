@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TJ KARAOKE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main-screen">
+        <img src="title.png" alt="KARAOKE" class="title-image">
+        <button id="enter-button" onclick="enterApp()">Enter</button>
+    </div>
+
+
+<div id="mood-screen" class="hidden">
+    <h2>How are you feeling today?</h2>
+    <div class="button-group">
+        <button onclick="selectMood('happy')">Happy</button>
+        <button onclick="selectMood('sad')">Sad</button>
+        <button onclick="selectMood('excited')">Excited</button>
+        <button onclick="selectMood('relaxed')">Relaxed</button>
+        <button onclick="selectMood('nostalgic')">Nostalgic</button>
+    </div>
+</div>
+
+
+<div id="who-screen" class="hidden">
+    <h2>Who are you with today?</h2>
+    <div class="button-group">
+        <button onclick="selectCompanion('friend')">Friend</button>
+        <button onclick="selectCompanion('family')">Family</button>
+        <button onclick="selectCompanion('partner')">Partner</button>
+        <button onclick="selectCompanion('coworker')">Coworker</button>
+    </div>
+</div>
+
+
+    <div id="genre-screen" class="hidden">
+        <h2>What genre do you want to sing?</h2>
+        <div class="button-group">
+            <button onclick="selectGenre('pop')">Pop</button>
+            <button onclick="selectGenre('rock')">Rock</button>
+            <button onclick="selectGenre('ballad')">Ballad</button>
+            <button onclick="selectGenre('hiphop')">Hip-hop</button>
+        </div>
+    </div>
+
+    <div id="loading-screen" class="hidden">
+        <h2>Loading your song recommendation...</h2>
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+        <p id="loading-percentage">0%</p>
+    </div>
+
+<div id="result-screen" class="hidden">
+    <div class="tv-frame">
+        <div class="tv-screen">
+            <h2>Your Song Recommendation!</h2>
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
